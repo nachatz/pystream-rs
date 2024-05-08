@@ -2,16 +2,15 @@
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-# Update according to your use-case
 [tool.poetry]
-name = "project_template"
-version = "2.0.0"
-description = "Template for Python applications"
-authors = ["Nikolas Achatz <nik@example.com>"]
-packages = [{ include = "project_template", from = "src" }]
+name = "pystream-rs"
+version = "0.0.1"
+description = "Streaming interfaces using highly optimized I/O with Rust bindings to Python"
+authors = ["Nikolas Achatz <nik.achatz@gmail.com>"]
+packages = [{ include = "pystream-rs", from = "src/python" }]
 
 [tool.black]
-target-version = ["py310"]
+target-version = ["py312"]
 line-length = 120
 
 [tool.mypy]
@@ -19,11 +18,8 @@ ignore_missing_imports = true
 disallow_untyped_defs = true
 follow_imports = "skip"
 
-# Add dependencies for production codebase
 [tool.poetry.dependencies]
-python = "^3.10"
-pydantic = "^2.3"
-requests = "^2.31.0"
+python = "^3.112"
 setuptools = "^58.0.0" 
 
 [tool.poetry.group.dev.dependencies]
